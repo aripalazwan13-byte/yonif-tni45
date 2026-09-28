@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lingkungan Pemasaran · SMK TKJ</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-chart-line"></i>
+        <span>Pemasaran<span class="light">TKJ</span></span>
+      </div>
+      <nav class="nav-links">
+        <a href="#" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Beranda</a>
+        <a href="#" class="nav-link" data-page="materi"><i class="fas fa-book-open"></i> Materi</a>
+        <a href="#" class="nav-link" data-page="kuis"><i class="fas fa-pen"></i> Kuis</a>
+        <a href="#" class="nav-link" data-page="progres"><i class="fas fa-chart-simple"></i> Progres</a>
+      </nav>
+      <div class="progress-badge" id="progressBadge">
+        <i class="fas fa-circle-check"></i> <span id="progressText">0%</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- ========== HALAMAN BERANDA ========== -->
+    <section id="page-home" class="page active-page">
+      <div class="hero">
+        <div class="hero-content">
+          <span class="hero-tag">SMK Teknik Komputer & Jaringan</span>
+          <h1>Lingkungan <span class="highlight">Pemasaran</span></h1>
+          <p>Pelajari hakikat pemasaran, strategi, bauran, hingga pemasaran produk perangkat keras. Interaktif & menyenangkan!</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="startLearningBtn"><i class="fas fa-rocket"></i> Mulai Belajar</button>
+            <button class="btn btn-outline" id="quickQuizBtn"><i class="fas fa-bolt"></i> Kuis Kilat</button>
+          </div>
+        </div>
+        <div class="hero-illustration">
+          <i class="fas fa-bullhorn"></i>
+          <i class="fas fa-chart-pie"></i>
+          <i class="fas fa-laptop"></i>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Hakikat Pemasaran</h3>
+          <p>Pahami definisi, tujuan, dan peran pemasaran dalam dunia industri.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-globe"></i>
+          <h3>Lingkungan Pemasaran</h3>
+          <p>Analisis mikro & makro yang mempengaruhi strategi pemasaran.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-cubes"></i>
+          <h3>Bauran Pemasaran</h3>
+          <p>Kuasai 4P (Product, Price, Place, Promotion) secara terintegrasi.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-microchip"></i>
+          <h3>Produk Perangkat Keras</h3>
+          <p>Studi kasus pemasaran router, switch, dan perangkat jaringan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HALAMAN MATERI ========== -->
+    <section id="page-materi" class="page">
+      <div class="page-header">
+        <h2><i class="fas fa-book-open"></i> Materi Pembelajaran</h2>
+        <p>Klik setiap topik untuk membaca. Tandai selesai untuk menyimpan progres.</p>
+      </div>
+
+      <div class="materi-tabs" id="materiTabs">
+        <button class="tab-btn active" data-topic="hakikat"><i class="fas fa-lightbulb"></i> 1. Hakikat</button>
+        <button class="tab-btn" data-topic="aspek"><i class="fas fa-compass"></i> 2. Aspek</button>
+        <button class="tab-btn" data-topic="lingkungan"><i class="fas fa-globe"></i> 3. Lingkungan</button>
+        <button class="tab-btn" data-topic="bauran"><i class="fas fa-cubes"></i> 4. Bauran</button>
+        <button class="tab-btn" data-topic="strategi"><i class="fas fa-chess"></i> 5. Strategi</button>
+        <button class="tab-btn" data-topic="hardware"><i class="fas fa-microchip"></i> 6. Hardware</button>
+        <button class="tab-btn" data-topic="media"><i class="fas fa-bullhorn"></i> 7. Media</button>
+        <button class="tab-btn" data-topic="iklan"><i class="fas fa-tv"></i> 8. Iklan</button>
+        <button class="tab-btn" data-topic="kesimpulan"><i class="fas fa-flag-checkered"></i> Kesimpulan</button>
+      </div>
+
+      <div class="materi-container" id="materiContainer">
+        <!-- Konten materi akan diisi JavaScript -->
+      </div>
+
+      <div class="materi-progress">
+        <span id="materiProgressLabel">0 dari 9 topik selesai</span>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="materiProgressFill" style="width:0%"></div>
+        </div>
+        <button class="btn btn-small btn-outline" id="resetMateriBtn"><i class="fas fa-rotate-left"></i> Reset</button>
+      </div>
+    </section>
+
+    <!-- ========== HALAMAN KUIS ========== -->
+    <section id="page-kuis" class="page">
+      <div class="page-header">
+        <h2><i class="fas fa-pen"></i> Kuis Interaktif</h2>
+        <p>Uji pemahamanmu tentang lingkungan pemasaran. Nilai tersimpan otomatis.</p>
+      </div>
+
+      <div class="quiz-wrapper" id="quizWrapper">
+        <!-- Quiz akan dirender JavaScript -->
+      </div>
+
+      <div class="quiz-result" id="quizResult" style="display:none;">
+        <h3>Hasil Kuis</h3>
+        <p>Skor kamu: <span id="quizScoreDisplay">0</span> / 100</p>
+        <button class="btn btn-primary" id="retryQuizBtn"><i class="fas fa-rotate-right"></i> Ulangi Kuis</button>
+      </div>
+    </section>
+
+    <!-- ========== HALAMAN PROGRES ========== -->
+    <section id="page-progres" class="page">
+      <div class="page-header">
+        <h2><i class="fas fa-chart-simple"></i> Progres Belajar</h2>
+        <p>Pantau kemajuanmu. Data tersimpan di LocalStorage browser.</p>
+      </div>
+
+      <div class="progress-dashboard">
+        <div class="progress-card">
+          <i class="fas fa-book"></i>
+          <h3>Materi Selesai</h3>
+          <div class="big-number" id="statMateri">0/9</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="statMateriBar" style="width:0%"></div></div>
+        </div>
+        <div class="progress-card">
+          <i class="fas fa-star"></i>
+          <h3>Nilai Kuis Terbaik</h3>
+          <div class="big-number" id="statQuizScore">0</div>
+          <p class="subtext">dari 100</p>
+        </div>
+        <div class="progress-card">
+          <i class="fas fa-clock"></i>
+          <h3>Terakhir Belajar</h3>
+          <div class="big-number" id="statLastActive" style="font-size:1.2rem;">-</div>
+        </div>
+      </div>
+
+      <div class="reset-section">
+        <button class="btn btn-outline" id="resetAllProgressBtn"><i class="fas fa-trash-can"></i> Reset Semua Progres</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Media Pembelajaran TKJ — Lingkungan Pemasaran. Dibuat dengan <i class="fas fa-heart" style="color:#e63946;"></i></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
